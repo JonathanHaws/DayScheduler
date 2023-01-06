@@ -9,4 +9,6 @@ Learned about local storage and how to use it to save information locally. Also 
 ### Credits
 Made by Jonathan Haws for 2022/2023 Univeristy Of Utah Coding Bootcamp
 
-![image](https://user-images.githubusercontent.com/108207472/211117662-4e5f923f-1ff3-48f1-85a5-5f321367d144.png)
+![image](https://user-images.githubusercontent.com/108207472/211118361-cefc277a-ce5c-4d86-a192-e20af85b3983.png)
+![image](https://user-images.githubusercontent.com/108207472/211118531-00ade85f-95ab-4798-89f2-7dbdee1c98dd.png)
+
