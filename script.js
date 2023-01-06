@@ -6,6 +6,26 @@ $(function () {
   
   $("#currentDay").text(dayjs().format("dddd MMMM D")); // display current time 
 
+  function createHour(hour, root){
+    
+    // dynamically display hour and current activity
+    var block = $("<div>",{ id: "hour-" + hour}).appendTo(root); 
+    if (hour < dayjs().hour()) { block.attr("class","row time-block past") } 
+    if (hour == dayjs().hour()) { block.attr("class","row time-block present") }
+    if (hour > dayjs().hour()) { block.attr("class","row time-block future") }
+    if (hour > 11) { var time = " PM";} else { var time = " AM";}
+    $("<div>",{ class: "col-2 col-md-1 hour text-center py-3"}).text((hour % 12) + time).appendTo(block);
+    $("<textarea>",{ class: "col-8 col-md-10 description", rows: "3"}).text("test").appendTo(block);
+    var button = $("<button>",{ class: "btn saveBtn col-2 col-md-1"}).attr("aria-label","save").appendTo(block);
+    $("<i>",{ class: "fas fa-save"}).attr("aria-hidden","true").appendTo(button);
+
+    // create listener to save new activity if save button is clicked
+  }
+
+  var root = document.body.childNodes[1];
+  createHour(19, root);
+  createHour(4, root);
+
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
